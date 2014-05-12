@@ -17,3 +17,5 @@ Route::get('/', function()
 });
 
 Route::get('tasks', 'TasksController@Index');
+
+Route::get('tasks/{id}', 'TasksController@show')->where('id', '\d+');
