@@ -8,7 +8,7 @@ class TasksController extends BaseController {
 
 		// fetch all tasks
 		$tasks = Task::all(); 
-
+		//$tasks = Task::with('user')->get(); 
 		//return $tasks;
 		// load a view to display them
 		return View::make('tasks.index', compact('tasks'));

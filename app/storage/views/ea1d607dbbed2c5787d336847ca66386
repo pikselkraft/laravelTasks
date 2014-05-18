@@ -5,6 +5,6 @@
 
 	<article><?php echo $task->body; ?></article>
 
-	<p><?php echo link_to('/tasks', 'Go back'); ?></p>
+	<p><?php echo link_to('/', 'Go back'); ?></p>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

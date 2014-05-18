@@ -1,18 +1,15 @@
-<!doctype html>
-<html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>Laravel</title>
-	</head>
+<?php $__env->startSection('content'); ?>
 
-	<body>
-		<h1>All Tasks</h1>
+
+	<h1>All Tasks</h1>
 
 		<?php foreach($tasks as $task): ?>
-			<li><?php echo link_to("tasks/$task->id", $task->title); ?></li>
+			<li>
+				<img src="http://placehold.it/25x25" alt="gravatar">
+				<?php echo link_to("tasks/$task->id", $task->title); ?>
+			</li>
 		<?php endforeach; ?>
 
-	</body>
-
-</html>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
